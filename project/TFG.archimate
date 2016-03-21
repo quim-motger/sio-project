@@ -91,32 +91,32 @@
         <bounds x="505" y="144" width="120" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="9d4ccb8b" textAlignment="2" targetConnections="a0bdf63d" archimateElement="59f84943">
-        <bounds x="1260" y="300" width="120" height="55"/>
+        <bounds x="1069" y="402" width="120" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="96004459" source="9d4ccb8b" target="c10e6e0f" relationship="4f56a43f"/>
         <sourceConnection xsi:type="archimate:Connection" id="9aaab8f7" source="9d4ccb8b" target="c17a7ac3" relationship="082aa118"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="4e0ef7d9" textAlignment="2" archimateElement="a0892f9c">
-        <bounds x="1046" y="780" width="120" height="55"/>
+        <bounds x="732" y="576" width="120" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="e1ec1caf" textAlignment="2" archimateElement="ecd6af37">
-        <bounds x="540" y="744" width="120" height="55"/>
+        <bounds x="468" y="480" width="120" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="788cf9b9" source="e1ec1caf" target="a79024fd" relationship="40a4facb"/>
         <sourceConnection xsi:type="archimate:Connection" id="717a746b" source="e1ec1caf" target="df7d42fc" relationship="65340b64"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="5b3a448c" textAlignment="2" archimateElement="04720235">
-        <bounds x="805" y="780" width="120" height="55"/>
+        <bounds x="721" y="516" width="120" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="a79024fd" textAlignment="2" targetConnections="788cf9b9" archimateElement="2106a598">
-        <bounds x="459" y="834" width="120" height="55"/>
+        <bounds x="387" y="570" width="120" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="df7d42fc" textAlignment="2" targetConnections="717a746b" archimateElement="7b22f31e">
-        <bounds x="624" y="834" width="120" height="55"/>
+        <bounds x="552" y="570" width="120" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="c10e6e0f" textAlignment="2" targetConnections="96004459" archimateElement="884c237b">
-        <bounds x="1188" y="378" width="120" height="55"/>
+        <bounds x="997" y="480" width="120" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="c17a7ac3" textAlignment="2" targetConnections="9aaab8f7" archimateElement="5a6f75d4">
-        <bounds x="1332" y="378" width="120" height="55"/>
+        <bounds x="1141" y="480" width="120" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="4f35e7da" textAlignment="2" archimateElement="60b9de4a">
         <bounds x="280" y="269" width="561" height="188"/>
@@ -138,13 +138,6 @@
           <sourceConnection xsi:type="archimate:Connection" id="11f43d8e" source="21c840c5" target="0a73b02b" relationship="6f1c842a"/>
         </child>
       </child>
-      <child xsi:type="archimate:DiagramObject" id="fba51e07" textAlignment="2" archimateElement="8778eba7">
-        <bounds x="72" y="606" width="157" height="55"/>
-      </child>
-      <child xsi:type="archimate:Note" id="a57c91f0" textAlignment="1">
-        <bounds x="1032" y="648" width="185" height="30"/>
-        <content>Reformular el projecte</content>
-      </child>
       <child xsi:type="archimate:DiagramObject" id="72d3ef92" textAlignment="2" archimateElement="4ec950b5">
         <bounds x="109" y="335" width="120" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="5e4e2c70" source="72d3ef92" target="a7f11ca2" relationship="2da0428a"/>
@@ -157,6 +150,22 @@
       <child xsi:type="archimate:DiagramObject" id="b20eabc3" textAlignment="2" targetConnections="411cf14b" archimateElement="ac25235d">
         <bounds x="1056" y="300" width="145" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="a0bdf63d" source="b20eabc3" target="9d4ccb8b" relationship="e6ab7bb0"/>
+      </child>
+      <child xsi:type="archimate:Note" id="9ecb30ac" textAlignment="1">
+        <bounds x="13" y="684" width="588" height="193"/>
+        <content>Matriculació TFG</content>
+      </child>
+      <child xsi:type="archimate:Note" id="ff5f575a" textAlignment="1">
+        <bounds x="13" y="900" width="588" height="193"/>
+        <content>Avaluació TFG : fita inicial /// fita de seguiment /// fita final</content>
+      </child>
+      <child xsi:type="archimate:Note" id="09331e05" textAlignment="1">
+        <bounds x="636" y="900" width="588" height="193"/>
+        <content>Consulta seguiment TFG's: consultes que poden realitzar els professors sobre els TFG's que tenen en seguiment, que han tingut, dels quals són directors... (li podem preguntar a en Joan Antoni si és necessari)</content>
+      </child>
+      <child xsi:type="archimate:Note" id="e81365c6" textAlignment="1">
+        <bounds x="636" y="684" width="588" height="193"/>
+        <content>Publicació acta d'avaluació final TFG</content>
       </child>
     </element>
   </folder>
