@@ -15,7 +15,7 @@
     <element xsi:type="archimate:BusinessService" id="12f32303"/>
     <element xsi:type="archimate:BusinessService" id="772efd96" name="Inscripció"/>
     <element xsi:type="archimate:BusinessRole" id="5abe7b07" name="Business Role"/>
-    <element xsi:type="archimate:BusinessProcess" id="60b9de4a" name="Inscripció TFG"/>
+    <element xsi:type="archimate:BusinessProcess" id="60b9de4a" name="Inscriure TFG"/>
     <element xsi:type="archimate:BusinessProcess" id="8778eba7" name="Oferta Publicada"/>
     <element xsi:type="archimate:BusinessProcess" id="84070344" name="Validació projecte"/>
     <element xsi:type="archimate:BusinessProcess" id="bfbe904b" name="Accepta"/>
@@ -35,6 +35,7 @@
     <element xsi:type="archimate:BusinessService" id="4ec950b5" name="Sol·licitud inscripció TFG"/>
     <element xsi:type="archimate:BusinessEvent" id="21674170" name="Projecte inscrit"/>
     <element xsi:type="archimate:BusinessProcess" id="ac25235d" name="Enviar inscripció al director de projecte"/>
+    <element xsi:type="archimate:Contract" id="d9acb362" name="Inscripció TFG"/>
   </folder>
   <folder name="Application" id="33b92c4d" type="application"/>
   <folder name="Technology" id="d95dfbb4" type="technology"/>
@@ -43,6 +44,7 @@
   <folder name="Connectors" id="01de0a9b" type="connectors">
     <element xsi:type="archimate:Junction" id="fc887fdb" name="Junction"/>
     <element xsi:type="archimate:Junction" id="69c28b74" name="Junction"/>
+    <element xsi:type="archimate:OrJunction" id="6a26a1b8" name="Or Junction"/>
   </folder>
   <folder name="Relations" id="a94b5bf7" type="relations">
     <element xsi:type="archimate:FlowRelationship" id="bfdd06cb" source="ecd6af37" target="7b22f31e"/>
@@ -81,6 +83,7 @@
     <element xsi:type="archimate:TriggeringRelationship" id="f804ede1" source="21674170" target="ac25235d"/>
     <element xsi:type="archimate:UsedByRelationship" id="877334a7" source="60b9de4a" target="4cc0848d"/>
     <element xsi:type="archimate:FlowRelationship" id="e6ab7bb0" source="ac25235d" target="59f84943"/>
+    <element xsi:type="archimate:AccessRelationship" id="0bfc0434" source="66121604" target="d9acb362"/>
   </folder>
   <folder name="Views" id="bae0d525" type="diagrams">
     <element xsi:type="archimate:ArchimateDiagramModel" id="a5c71330" name="Default View">
@@ -88,7 +91,7 @@
         <bounds x="108" y="213" width="121" height="57"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="f15ebcd1" textAlignment="2" targetConnections="0b394cdd" archimateElement="4cc0848d">
-        <bounds x="505" y="144" width="120" height="55"/>
+        <bounds x="501" y="99" width="120" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="9d4ccb8b" textAlignment="2" targetConnections="a0bdf63d" archimateElement="59f84943">
         <bounds x="1069" y="402" width="120" height="55"/>
@@ -127,8 +130,8 @@
         </child>
         <child xsi:type="archimate:DiagramObject" id="ef328a2b" textAlignment="2" targetConnections="ff8c54d6" archimateElement="421af621">
           <bounds x="228" y="72" width="120" height="55"/>
-          <sourceConnection xsi:type="archimate:Connection" id="1b362a40" source="ef328a2b" target="21c840c5" relationship="5020009b"/>
           <sourceConnection xsi:type="archimate:Connection" id="62a78f53" source="ef328a2b" target="c85a107d" relationship="444f8cae"/>
+          <sourceConnection xsi:type="archimate:Connection" id="1b362a40" source="ef328a2b" target="21c840c5" relationship="5020009b"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="c85a107d" textAlignment="2" targetConnections="62a78f53" archimateElement="10765975">
           <bounds x="396" y="108" width="120" height="55"/>
@@ -136,6 +139,7 @@
         <child xsi:type="archimate:DiagramObject" id="21c840c5" textAlignment="2" targetConnections="1b362a40" archimateElement="66121604">
           <bounds x="396" y="36" width="120" height="55"/>
           <sourceConnection xsi:type="archimate:Connection" id="11f43d8e" source="21c840c5" target="0a73b02b" relationship="6f1c842a"/>
+          <sourceConnection xsi:type="archimate:Connection" id="62186689" source="21c840c5" target="88e41bbb" relationship="0bfc0434"/>
         </child>
       </child>
       <child xsi:type="archimate:DiagramObject" id="72d3ef92" textAlignment="2" archimateElement="4ec950b5">
@@ -166,6 +170,9 @@
       <child xsi:type="archimate:Note" id="e81365c6" textAlignment="1">
         <bounds x="636" y="684" width="588" height="193"/>
         <content>Publicació acta d'avaluació final TFG</content>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="88e41bbb" textAlignment="2" targetConnections="62186689" archimateElement="d9acb362">
+        <bounds x="672" y="153" width="122" height="61"/>
       </child>
     </element>
   </folder>
