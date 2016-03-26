@@ -197,6 +197,7 @@
     <element xsi:type="archimate:TriggeringRelationship" id="df9dfd29" source="bf924b7f" target="6d1d726e"/>
     <element xsi:type="archimate:UsedByRelationship" id="3298f814" source="53781c4b" target="bf924b7f"/>
     <element xsi:type="archimate:UsedByRelationship" id="dc9c0a82" source="53781c4b" target="bdcadc8a"/>
+    <element xsi:type="archimate:AssociationRelationship" id="a33c2f75" source="61d60542" target="639f4f4d"/>
   </folder>
   <folder name="Views" id="bae0d525" type="diagrams">
     <folder name="Inscripcio" id="4e9184e9">
@@ -367,7 +368,7 @@
           <sourceConnection xsi:type="archimate:Connection" id="e784123c" source="ec605c0a" target="963477d9" relationship="3298f814"/>
           <sourceConnection xsi:type="archimate:Connection" id="1eddccaa" source="ec605c0a" target="718b2099" relationship="dc9c0a82"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="7361b874" textAlignment="2" targetConnections="3c2b1528" archimateElement="639f4f4d">
+        <child xsi:type="archimate:DiagramObject" id="7361b874" textAlignment="2" targetConnections="3c2b1528 3c18deab" archimateElement="639f4f4d">
           <bounds x="-48" y="114" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="8ea75e54" textAlignment="2" targetConnections="5200786b 1acfe8b4" archimateElement="c9f4a124">
@@ -425,6 +426,10 @@
         </child>
         <child xsi:type="archimate:DiagramObject" id="332943bd" textAlignment="2" targetConnections="adc95ba2" archimateElement="61d60542">
           <bounds x="876" y="72" width="120" height="68"/>
+          <sourceConnection xsi:type="archimate:Connection" id="3c18deab" source="332943bd" target="7361b874" relationship="a33c2f75">
+            <bendpoint startY="-106" endX="924" endY="-141"/>
+            <bendpoint startX="-924" startY="-106" endY="-141"/>
+          </sourceConnection>
         </child>
       </element>
     </folder>
