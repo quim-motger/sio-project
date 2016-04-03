@@ -87,8 +87,8 @@
     <element xsi:type="archimate:BusinessProcess" id="a35597ad" name="Validar projecte (copy)"/>
     <element xsi:type="archimate:BusinessProcess" id="d1679695" name="Rebutjar inscripció (copy)"/>
     <element xsi:type="archimate:BusinessProcess" id="c112079d" name="Acceptar inscripció (copy)"/>
-    <element xsi:type="archimate:BusinessProcess" id="4f13d4bb" name="Crear inscripció"/>
-    <element xsi:type="archimate:BusinessProcess" id="dfdc8fee" name="Definir competències"/>
+    <element xsi:type="archimate:BusinessProcess" id="4f13d4bb" name="Omplir formulari matriculació"/>
+    <element xsi:type="archimate:BusinessProcess" id="dfdc8fee" name="Confirmar matricula"/>
     <element xsi:type="archimate:Product" id="103b7153" name="Inscripció TFG"/>
     <element xsi:type="archimate:Contract" id="e898d545" name="Inscripció TFG"/>
     <element xsi:type="archimate:BusinessProcess" id="f9cda3cf" name="Acceptar"/>
@@ -154,6 +154,7 @@
     <element xsi:type="archimate:BusinessActor" id="e87b0ab1" name="Director (copy)"/>
     <element xsi:type="archimate:BusinessActor" id="39eafdd6" name="Ponent (copy)"/>
     <element xsi:type="archimate:BusinessProcess" id="42a3192b" name="Reunió amb l'avaluador (copy)"/>
+    <element xsi:type="archimate:BusinessProcess" id="7fe85370" name="Pagar matrícula"/>
   </folder>
   <folder name="Application" id="33b92c4d" type="application">
     <element xsi:type="archimate:ApplicationFunction" id="e6e92009" name="Inscripció TFG"/>
@@ -161,7 +162,7 @@
     <element xsi:type="archimate:ApplicationFunction" id="3e617490" name="Inscripció TFG (copy)"/>
     <element xsi:type="archimate:DataObject" id="7348997f" name="Inscripció TFG (copy)"/>
     <element xsi:type="archimate:ApplicationInterface" id="83f96152" name="Secció inscripció web Racó"/>
-    <element xsi:type="archimate:ApplicationComponent" id="404e22e3" name="Racó FIB"/>
+    <element xsi:type="archimate:ApplicationComponent" id="404e22e3" name="PRISMA"/>
     <element xsi:type="archimate:ApplicationComponent" id="421079b0" name="Secció inscripció (web Racó)"/>
     <element xsi:type="archimate:ApplicationComponent" id="8f51189c" name="PRISMA"/>
     <element xsi:type="archimate:ApplicationComponent" id="0a4ee159" name="Secció inscripció (web Racó) (copy)"/>
@@ -171,6 +172,8 @@
     <element xsi:type="archimate:ApplicationFunction" id="58d16927" name="Validació inscripció"/>
     <element xsi:type="archimate:ApplicationFunction" id="0528507f" name="Tramitar inscripció"/>
     <element xsi:type="archimate:DataObject" id="10cc339b" name="Fitxer inscripció TFG (PRISMA)"/>
+    <element xsi:type="archimate:ApplicationInterface" id="a62b57bc" name="Web e-Secretaria"/>
+    <element xsi:type="archimate:ApplicationFunction" id="ea4227c1" name="Matrícula estudiants"/>
   </folder>
   <folder name="Technology" id="d95dfbb4" type="technology">
     <element xsi:type="archimate:Artifact" id="81c2946f" name="Artifact"/>
@@ -402,6 +405,10 @@
     <element xsi:type="archimate:TriggeringRelationship" id="358cbbed" source="5f3f97d7" target="39eafdd6"/>
     <element xsi:type="archimate:TriggeringRelationship" id="2ce64e16" source="42a3192b" target="398b82d9"/>
     <element xsi:type="archimate:TriggeringRelationship" id="0f39ea42" source="0cdf6037" target="486e451a"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="672ba75f" source="dfdc8fee" target="7fe85370"/>
+    <element xsi:type="archimate:UsedByRelationship" id="01bc1d69" source="404e22e3" target="a62b57bc"/>
+    <element xsi:type="archimate:UsedByRelationship" id="22d8fca9" source="a62b57bc" target="ea4227c1"/>
+    <element xsi:type="archimate:UsedByRelationship" id="63370bfa" source="ea4227c1" target="267fb104"/>
   </folder>
   <folder name="Views" id="bae0d525" type="diagrams">
     <folder name="Inscripcio" id="4e9184e9">
@@ -568,6 +575,51 @@
             <sourceConnection xsi:type="archimate:Connection" id="eb6c86a2" source="5e4de8bf" target="36074a8a" relationship="30602e36">
               <bendpoint startX="440" startY="-3" endX="-12" endY="214"/>
             </sourceConnection>
+          </child>
+        </child>
+      </element>
+      <element xsi:type="archimate:ArchimateDiagramModel" id="5bfa091b" name="Matrícula View">
+        <child xsi:type="archimate:Group" id="1f630a7b" name="Application Layer" fillColor="#b5ffff">
+          <bounds x="24" y="360" width="816" height="252"/>
+          <child xsi:type="archimate:DiagramObject" id="d08cdf1f" textAlignment="2" targetConnections="f4d71f84" archimateElement="404e22e3">
+            <bounds x="24" y="72" width="229" height="120"/>
+            <sourceConnection xsi:type="archimate:Connection" id="03b89513" source="d08cdf1f" target="e0ac3f88" relationship="01bc1d69"/>
+          </child>
+          <child xsi:type="archimate:DiagramObject" id="e0ac3f88" textAlignment="2" targetConnections="03b89513" archimateElement="a62b57bc">
+            <bounds x="336" y="105" width="146" height="53"/>
+            <sourceConnection xsi:type="archimate:Connection" id="46107456" source="e0ac3f88" target="76e4ef50" relationship="22d8fca9"/>
+          </child>
+          <child xsi:type="archimate:DiagramObject" id="76e4ef50" textAlignment="2" targetConnections="46107456" archimateElement="ea4227c1">
+            <bounds x="552" y="104" width="120" height="55"/>
+            <sourceConnection xsi:type="archimate:Connection" id="246d4fec" source="76e4ef50" target="3c6578ef" relationship="63370bfa"/>
+          </child>
+        </child>
+        <child xsi:type="archimate:Group" id="9e7be741" name="Business Layer" fontColor="#000000" fillColor="#fefeb4">
+          <bounds x="24" y="24" width="816" height="313"/>
+          <child xsi:type="archimate:DiagramObject" id="2e22d7fe" textAlignment="2" targetConnections="5d1a24f7" archimateElement="c0bffdb9">
+            <bounds x="84" y="138" width="121" height="57"/>
+          </child>
+          <child xsi:type="archimate:DiagramObject" id="3c6578ef" textAlignment="2" targetConnections="246d4fec" archimateElement="267fb104">
+            <bounds x="240" y="72" width="468" height="187"/>
+            <sourceConnection xsi:type="archimate:Connection" id="5d1a24f7" source="3c6578ef" target="2e22d7fe" relationship="6d5def5d"/>
+            <child xsi:type="archimate:DiagramObject" id="e22ee83a" textAlignment="2" archimateElement="4f13d4bb">
+              <bounds x="24" y="70" width="121" height="60"/>
+              <sourceConnection xsi:type="archimate:Connection" id="e04036b6" source="e22ee83a" target="bb1fc694" relationship="77c8eb20"/>
+            </child>
+            <child xsi:type="archimate:DiagramObject" id="bb1fc694" textAlignment="2" targetConnections="e04036b6" archimateElement="dfdc8fee">
+              <bounds x="168" y="70" width="125" height="60"/>
+              <sourceConnection xsi:type="archimate:Connection" id="aae019f9" source="bb1fc694" target="f54b4fdc" relationship="672ba75f"/>
+            </child>
+            <child xsi:type="archimate:DiagramObject" id="f54b4fdc" textAlignment="2" targetConnections="aae019f9" archimateElement="7fe85370">
+              <bounds x="324" y="70" width="125" height="60"/>
+            </child>
+          </child>
+        </child>
+        <child xsi:type="archimate:Group" id="9b056ad4" name="Infrastructure Layer" fillColor="#c9e7b7">
+          <bounds x="24" y="636" width="816" height="226"/>
+          <child xsi:type="archimate:DiagramObject" id="6d6f07f5" textAlignment="2" archimateElement="5346eb70">
+            <bounds x="204" y="48" width="362" height="131"/>
+            <sourceConnection xsi:type="archimate:Connection" id="f4d71f84" source="6d6f07f5" target="d08cdf1f" relationship="a7a0c2d8"/>
           </child>
         </child>
       </element>
